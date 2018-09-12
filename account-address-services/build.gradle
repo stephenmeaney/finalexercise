@@ -34,7 +34,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-jdbc')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker')
+    //compile('io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker')
     compile('io.pivotal.spring.cloud:spring-cloud-services-starter-config-client')
     compile('io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-ribbon')
@@ -43,6 +43,8 @@ dependencies {
     runtime('com.h2database:h2')
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile group: 'com.github.springtestdbunit', name: 'spring-test-dbunit', version: '1.2.0'
+    testCompile group: 'org.dbunit', name: 'dbunit', version: '2.5.0'
 }
 
 dependencyManagement {
